@@ -1,0 +1,6 @@
+@Finanzas_BackEnd_HostAddress = http://localhost:5052
+
+GET {{Finanzas_BackEnd_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
