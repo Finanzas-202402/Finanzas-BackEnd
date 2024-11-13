@@ -149,12 +149,12 @@ public class BillsController(IBillCommandService billCommandService, IBillQueryS
         if (bill.RateType == ERateType.Nominal)
         {
             billValue = bill.BillValue / (decimal)Math.Pow((double)(1 + ((bill.RateValue / 100) / (m / n))),
-                ((bill.EndDate.Date - bill.StartDate.Date).Days) / (double)n);
+                ((bill.ExpirationDate.Date - bill.EndDate.Date).Days) / (double)n);
         }
         else if (bill.RateType == ERateType.Effective)
         {
             billValue = bill.BillValue / (decimal)Math.Pow((double)(1 + (bill.RateValue / 100)),
-                ((bill.EndDate.Date - bill.StartDate.Date).Days) / (double)m);
+                ((bill.ExpirationDate.Date - bill.EndDate.Date).Days) / (double)m);
         }
         else
         {
@@ -190,7 +190,7 @@ public class BillsController(IBillCommandService billCommandService, IBillQueryS
         
         var billValue = CalculateBillValue(bill);
         var eac = (((decimal)Math.Pow((double)(bill.BillValue / billValue),
-            (360 / (double)((bill.ExpirationDate.Date - bill.EndDate.Date).Days)))) - 1) * 100;
+            (360 / (double)((bill.EndDate.Date - bill.StartDate.Date).Days)))) - 1) * 100;
         
         // End of EAC calculation logic
 

@@ -13,7 +13,7 @@ public abstract class BaseRepository<TEntity>(AppDbContext context) : IBaseRepos
 
     public async Task<TEntity?> FindByIdAsync(int id) => await Context.Set<TEntity>().FindAsync(id);
 
-    public void UpdateAsync(TEntity entity) => Context.Set<TEntity>().Update(entity);
+    public void UpdateAsync(TEntity entity, int id) => Context.Set<TEntity>().Update(entity);
 
     public void Remove(TEntity entity) => Context.Set<TEntity>().Remove(entity);
 
