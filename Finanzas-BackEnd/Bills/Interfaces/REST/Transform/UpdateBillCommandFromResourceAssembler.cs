@@ -30,6 +30,7 @@ public static class UpdateBillCommandFromResourceAssembler
         
         return new UpdateBillCommand(
             resource.Id,
+            resource.Description,
             resource.BillValue,
             currency,
             rateType,

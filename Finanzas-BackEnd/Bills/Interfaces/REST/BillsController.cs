@@ -190,7 +190,7 @@ public class BillsController(IBillCommandService billCommandService, IBillQueryS
         
         var billValue = CalculateBillValue(bill);
         var eac = (((decimal)Math.Pow((double)(bill.BillValue / billValue),
-            (360 / (double)((bill.EndDate.Date - bill.StartDate.Date).Days)))) - 1) * 100;
+            (360 / (double)((bill.ExpirationDate.Date - bill.EndDate.Date).Days)))) - 1) * 100;
         
         // End of EAC calculation logic
 

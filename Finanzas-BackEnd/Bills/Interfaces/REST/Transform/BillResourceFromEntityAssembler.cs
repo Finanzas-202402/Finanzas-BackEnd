@@ -10,6 +10,7 @@ public static class BillResourceFromEntityAssembler
     {
         return new BillResource(
             bill.Id,
+            bill.Description,
             bill.BillValue,
             bill.Currency.GetDisplayName(),
             bill.RateType.GetDisplayName(),

@@ -30,6 +30,7 @@ public static class CreateBillCommandFromResourceAssembler
         }   
         
         return new CreateBillCommand(
+            resource.Description,
             resource.BillValue,
             currency,
             rateType,

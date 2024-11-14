@@ -7,33 +7,23 @@ namespace Finanzas_BackEnd.Bills.Domain.Model.Aggregates;
 public class Bill
 {
     public int Id { get; }
-    
+    public string Description { get; private set; }
     public decimal BillValue { get; private set; }
-    
     public ECurrency Currency { get; protected set; }
-    
     public ERateType RateType { get; protected set; }
-
     public ERateTime RateTime { get; protected set; }
-    
     public ECapitalization Capitalization { get; protected set; }
-    
     public decimal RateValue { get; private set; }
-    
     public DateTime StartDate { get; private set; }
-    
     public DateTime EndDate { get; private set; }
-    
     public DateTime ExpirationDate { get; private set; }
-    
     public bool Cancelled { get; private set; }
-    
     public int UserId { get; set; } // Foreign key
-    
-    public User User { get; set; } // Navigation property
+    public User? User { get; set; } // Navigation property
 
-    public Bill(decimal billValue, ECurrency currency, ERateType rateType, ERateTime rateTime, ECapitalization capitalization, decimal rateValue, DateTime startDate, DateTime endDate, DateTime expirationDate, bool cancelled, int userId)
+    public Bill(string description, decimal billValue, ECurrency currency, ERateType rateType, ERateTime rateTime, ECapitalization capitalization, decimal rateValue, DateTime startDate, DateTime endDate, DateTime expirationDate, bool cancelled, int userId)
     {
+        Description = description;
         BillValue = billValue;
         Currency = currency;
         RateType = rateType;
@@ -49,6 +39,7 @@ public class Bill
     
     public Bill(CreateBillCommand command)
     {
+        Description = command.Description;
         BillValue = command.BillValue;
         Currency = command.Currency;
         RateType = command.RateType;
@@ -65,6 +56,7 @@ public class Bill
     public Bill(UpdateBillCommand command)
     {
         Id = command.Id;
+        Description = command.Description;
         BillValue = command.BillValue;
         Currency = command.Currency;
         RateType = command.RateType;
