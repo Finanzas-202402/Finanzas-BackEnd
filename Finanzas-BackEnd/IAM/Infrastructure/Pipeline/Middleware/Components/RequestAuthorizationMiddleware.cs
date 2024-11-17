@@ -14,17 +14,9 @@ public class RequestAuthorizationMiddleware(RequestDelegate next)
     )
     {
         Console.WriteLine("Entering InvokeAsync");
-
-        var endpoint = context.Request.HttpContext.GetEndpoint();
-        if (endpoint == null)
-        {
-            Console.WriteLine("Endpoint is null. Skipping Authorization.");
-            await next(context);
-            return;
-        }
-
-        var allowAnonymous = endpoint.Metadata.Any(m =>
-            m.GetType() == typeof(AllowAnonymousAttribute));
+        var allowAnonymous =
+            context.Request.HttpContext.GetEndpoint()!.Metadata.Any(m =>
+                m.GetType() == typeof(AllowAnonymousAttribute));
         Console.WriteLine($"Allow Anonymous is {allowAnonymous}");
         if (allowAnonymous)
         {
@@ -32,19 +24,15 @@ public class RequestAuthorizationMiddleware(RequestDelegate next)
             await next(context);
             return;
         }
-
         Console.WriteLine("Checking Authorization");
         var token = context.Request.Headers["Authorization"].FirstOrDefault()?
             .Split(" ").Last();
         if (token == null) throw new Exception("Null or invalid token");
-
         var userId = await tokenService.ValidateToken(token);
         if (userId == null) throw new Exception("Invalid token");
-
         var getUserByIdQuery = new GetUserByIdQuery(userId.Value);
         var user = await userQueryService.Handle(getUserByIdQuery);
         if (user == null) throw new Exception("User not found");
-
         Console.WriteLine("Authorization successful");
         context.Items["User"] = user;
         Console.WriteLine("Continuing with Middleware pipeline");

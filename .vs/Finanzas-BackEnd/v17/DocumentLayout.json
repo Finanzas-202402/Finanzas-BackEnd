@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\salvl\\RiderProjects\\Finanzas-BackEnd-Final\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A45E4458-AC52-4025-B6D8-0197980ED08C}|Finanzas-BackEnd\\Finanzas-BackEnd.csproj|c:\\users\\salvl\\riderprojects\\finanzas-backend-final\\finanzas-backend\\iam\\infrastructure\\pipeline\\middleware\\components\\requestauthorizationmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A45E4458-AC52-4025-B6D8-0197980ED08C}|Finanzas-BackEnd\\Finanzas-BackEnd.csproj|solutionrelative:finanzas-backend\\iam\\infrastructure\\pipeline\\middleware\\components\\requestauthorizationmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A45E4458-AC52-4025-B6D8-0197980ED08C}|Finanzas-BackEnd\\Finanzas-BackEnd.csproj|c:\\users\\salvl\\riderprojects\\finanzas-backend-final\\finanzas-backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A45E4458-AC52-4025-B6D8-0197980ED08C}|Finanzas-BackEnd\\Finanzas-BackEnd.csproj|solutionrelative:finanzas-backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RequestAuthorizationMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\salvl\\RiderProjects\\Finanzas-BackEnd-Final\\Finanzas-BackEnd\\IAM\\Infrastructure\\Pipeline\\Middleware\\Components\\RequestAuthorizationMiddleware.cs",
+              "RelativeDocumentMoniker": "Finanzas-BackEnd\\IAM\\Infrastructure\\Pipeline\\Middleware\\Components\\RequestAuthorizationMiddleware.cs",
+              "ToolTip": "C:\\Users\\salvl\\RiderProjects\\Finanzas-BackEnd-Final\\Finanzas-BackEnd\\IAM\\Infrastructure\\Pipeline\\Middleware\\Components\\RequestAuthorizationMiddleware.cs",
+              "RelativeToolTip": "Finanzas-BackEnd\\IAM\\Infrastructure\\Pipeline\\Middleware\\Components\\RequestAuthorizationMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T02:02:50.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\salvl\\RiderProjects\\Finanzas-BackEnd-Final\\Finanzas-BackEnd\\appsettings.json",
+              "RelativeDocumentMoniker": "Finanzas-BackEnd\\appsettings.json",
+              "ToolTip": "C:\\Users\\salvl\\RiderProjects\\Finanzas-BackEnd-Final\\Finanzas-BackEnd\\appsettings.json",
+              "RelativeToolTip": "Finanzas-BackEnd\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-17T01:41:09.946Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
